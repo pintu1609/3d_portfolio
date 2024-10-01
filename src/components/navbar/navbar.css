@@ -1,0 +1,7 @@
+.nav-list li .nav-link:hover .tooltips {
+    opacity: 100;
+    visibility: visible;
+}
+.tooltips {
+    pointer-events: none; /* Prevent interaction with the tooltip */
+}

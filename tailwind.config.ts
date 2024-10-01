@@ -11,6 +11,13 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "nav-bg-color": "var(--nav-bg-color)",
+        "bg-color": "var(--bg-color)",
+        "second-bg-color": "var(--second-bg-color)",
+        "third-bg-color": "var(--third-bg-color)",
+        "main-color": "var(---main-color)",
+        "main-white": "var(--main-white)",
+        "tab-list-color": "var(--tab-list-color)",
       },
     },
   },

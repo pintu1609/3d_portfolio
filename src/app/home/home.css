@@ -1,0 +1,4 @@
+.social:hover .tooltips {
+    opacity: 1;
+    visibility: visible;
+}
