@@ -34,7 +34,7 @@ const projectdata=[
       },
      
         {
-          "image":'/image/3dWebsite.jpg',
+          "image":'/image/newsapp.png',
           "tools":"React, JavaScript, Bootstrap",
             "title":"NewsMonkey",
             "duration" :"July 2023 - July 2023",
@@ -46,7 +46,7 @@ const projectdata=[
 
         },
         {
-          "image":'/image/3dWebsite.jpg',
+          "image":'/image/researchPaperNewsArticle.jpg',
             "tools":"Python,NLP",
               "title":" Analytics of Indian English News Atrticle",
               "duration":"Aug. 2022 - Nov. 2022 ",
@@ -57,7 +57,7 @@ const projectdata=[
   
           },
           {
-            "image":'/image/3dWebsite.jpg',
+            "image":'/image/arcgis.jpg',
 
         "tools":"Arcgis",
                 "title":"Analysis of risk factor in Northern Indian",
