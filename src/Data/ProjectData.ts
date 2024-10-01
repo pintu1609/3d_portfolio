@@ -74,7 +74,7 @@ const projectdata=[
                   "duration":"Feb. 2022 - April 2022",
                   "body":"The Grader Android learning app enables users to take mock tests in various subjects, each containing different questions, all within a set time limit. Post-test, users can assess their scores, view leaderboard rankings, and bookmark questions for reference. Additionally, they can review correct answers to all questions, enhancing their learning experience. ",
                   "projectlink":"https://github.com/pintu1609/Learning-app-Grader",
-                  "preview":"",
+                  "preview":"https://drive.google.com/file/d/1nCG8nxCuUoTXxbilQ0GUIDfW6bQg-oLy/view?usp=sharing",
 
                   "user_id":7
       
