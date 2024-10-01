@@ -6,7 +6,7 @@ const projectdata=[
     "duration":"Sep. 2024",
     "body":"A 3D portfolio showcases our work in an immersive, interactive format, allowing viewers to experience projects from multiple angles, enhancing engagement and providing a unique perspective on our skills.",
     "projectlink":"https://github.com/pintu1609/3d_portfolio",
-    "preview":"",
+    "preview":"https://pintukumar.vercel.app/",
     "user_id":1
   },
     {
