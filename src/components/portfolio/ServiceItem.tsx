@@ -1,4 +1,13 @@
-export default function ServiceItem({ item }: any) {
+import React from "react";
+
+interface ServiceItemProps {
+    item: {
+        icon: React.ReactNode;  // Adjust type as needed (e.g., string, JSX.Element)
+        title: string;
+        desc: string;
+    };
+}
+const ServiceItem: React.FC<ServiceItemProps> = ({ item }) => {
     return (
         <div className="flex flex-col justify-start gap-2 bg-tab-list-color py-[1.5rem] px-4 rounded-md w-full group">
             <div className="flex justify-between items-center">
@@ -14,3 +23,5 @@ export default function ServiceItem({ item }: any) {
 
     );
 }
+
+export default ServiceItem;

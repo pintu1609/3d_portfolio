@@ -1,4 +1,15 @@
-export default function EducationCourseItem({item}:any) {
+import React from "react";
+
+interface EducationCourseItemProps {
+    item: {
+        duration: string;
+        title: string;
+        Mode: string;
+        description: string;
+    }
+}
+
+ const EducationCourseItem: React.FC<EducationCourseItemProps> = ({item})=> {
     return (
         <div className="flex flex-col justify-start gap-2 bg-tab-list-color p-4 rounded-md w-full">
             <p className="text-sm text-main-color">{item?.duration}</p>
@@ -9,3 +20,5 @@ export default function EducationCourseItem({item}:any) {
 
     );
 }
+
+export default EducationCourseItem

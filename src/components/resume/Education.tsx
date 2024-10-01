@@ -7,7 +7,7 @@ export default function Education() {
         <div className="flex flex-col  mt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 w-full" >
             {EducationData?.certificateData?.map((item, index) => (
-                <EducationCourseItem item={item}/>
+                <EducationCourseItem item={item} key={index}/>
                 
             ))}
        
@@ -21,7 +21,7 @@ export default function Education() {
 
         <div className="flex flex-col justify-center gap-2 w-full my-8" >
             {EducationData?.degreeData?.map((item, index) => (
-                <EducationItem item={item}/>
+                <EducationItem item={item} key={index}/>
                 
             ))}
         </div>

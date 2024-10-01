@@ -5,7 +5,6 @@ import type { NextRequest } from "next/server";
 export async function middleware(request: NextRequest) {
 
 
-  const currentUser = request.cookies.get("accessToken")?.value;
   // If the user is already signed in, then send the user to dashboard intsad of login page
   if (request.nextUrl.pathname === "/") {
     

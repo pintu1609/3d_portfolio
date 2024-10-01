@@ -1,5 +1,16 @@
-export default function ExperienceItem({item}:any) {
-    return (
+import React from 'react';
+
+interface ExperienceItemProps {
+    item: {
+        duration: string;
+        location: string;
+        type: string;
+        title: string;
+        company: string;
+        body: string;
+    };
+}
+const ExperienceItem: React.FC<ExperienceItemProps> = ({ item }) => {    return (
         <div className="flex flex-col justify-start gap-[.2rem] bg-tab-list-color p-4 rounded-md w-full">
             <div className="flex justify-between">
             <p className="text-sm text-main-color underline underline-offset-4">{item?.duration} ({item?.location})</p>
@@ -12,3 +23,5 @@ export default function ExperienceItem({item}:any) {
 
     );
 }
+
+export default ExperienceItem

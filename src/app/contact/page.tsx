@@ -43,7 +43,7 @@ export default function Contact() {
             <div className="flex flex-col items-center gap-4 w-[90%] md:w-3/5 py-16">
 
                 <h2 className="text-3xl text-main-white font-bold">Contact</h2>
-                <h2 className="text-2xl text-main-color font-bold pt-16">Let's Work Together!</h2>
+                <h2 className="text-2xl text-main-color font-bold pt-16">Let&apos;s Work Together!</h2>
                 <form onSubmit={handleSubmit} className="sm:w-2/3" >
                     <div className="flex flex-col justify-center gap-4">
                     <div className="grid grid-cols-2 gap-4">

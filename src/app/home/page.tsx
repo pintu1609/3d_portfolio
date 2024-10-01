@@ -7,7 +7,7 @@ export default function Home() {
         <div className=" bg-bg-color h-screen w-full">
         <div className="flex flex-col-reverse sm:flex-row justify-center items-center gap-[3rem] sm:gap-[5rem] h-full w-full custom:w-4/5 mx-auto h-full p-4 sm:p-0 ">
             <div className="flex flex-col justify-start gap-2 ">
-                <h3 className="text-2xl text-main-white font-bold">Hello i'm</h3>
+                <h3 className="text-2xl text-main-white font-bold">Hello i&apos;m</h3>
                 <h1 className="text-5xl text-main-color font-bold">Pintu Kumar</h1>
                 <h3 className="text-2xl text-main-white font-bold">Full Stack Developer</h3>
                 <p className="text-xl text-main-white">A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.</p>

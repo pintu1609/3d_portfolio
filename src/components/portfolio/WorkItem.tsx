@@ -1,5 +1,18 @@
+import React from 'react';
 import './workItem.css';
-export default function WorkItem({ item }: any) {
+interface WorkItemProps {
+    item: {
+        image: string;
+        title: string;
+        duration: string;
+        body: string;
+        tools: string;
+        preview?: string; // Optional
+        projectlink?: string; // Optional
+    };
+}
+
+const WorkItem: React.FC<WorkItemProps> = ({ item }) => {
     return (
         <div className="relative group">
             <div className="rounded-md h-[16rem] overflow-hidden duration-300">
@@ -40,3 +53,5 @@ export default function WorkItem({ item }: any) {
         </div>
     );
 }
+
+export default WorkItem;

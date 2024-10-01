@@ -1,5 +1,4 @@
 "use client"
-import Link from "next/link";
 export default function About() {
     return (
         <div className=" bg-bg-color h-screen w-full">

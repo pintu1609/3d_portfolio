@@ -1,4 +1,18 @@
-export default function EducationItem({item}:any) {
+import React from 'react'
+
+interface EducationItemProps {
+    item: {
+        image: string;
+        title: string;
+        subtitle: string;
+        duration: string;
+        cource: string;
+        subcourse: string;
+        desc: string[];
+        link: string; // Added the link property
+    }
+}
+const EducationItem: React.FC<EducationItemProps> = ({item})=> {
     return (
         <div className="flex md:flex-row flex-col items-center w-full gap-4 bg-tab-list-color p-4 rounded-md">
             <div className="w-full sm:w-2/5 lg:w-1/5  overflow-hidden flex items-center justify-center  ">
@@ -19,8 +33,8 @@ export default function EducationItem({item}:any) {
             </div>
 
             <div className="flex flex-col justify-start gap-2">
-                {item?.desc?.map((desc:string) => (
-                    <p className="flex items-center gap-2 text-sm sm:text-xl text-main-white text-justify"><i className='bx bxs-bolt text-2xl text-main-color' ></i>{desc}</p>
+                {item?.desc?.map((desc, index ) => (
+                    <p className="flex items-center gap-2 text-sm sm:text-xl text-main-white text-justify" key={index}><i className='bx bxs-bolt text-2xl text-main-color' ></i>{desc}</p>
                 ))
             }
 
@@ -33,3 +47,5 @@ export default function EducationItem({item}:any) {
 
     );
 }
+
+export default EducationItem
