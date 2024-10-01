@@ -24,9 +24,11 @@ const certificateData =[
     {
       "link": "https://cic.du.ac.in/",
       "title": "Cluster Innovation Centre, University Of Delhi",
+      "subtitle":"University Of Delhi(CIC)",
       "image": "/Image/du.jpeg",
       "duration":"2020 - 2024",
       "cource":"B.Tech in Information Technology & Mathematical Innovation",
+      "subcourse":"B.Tech(IT & MI)",
       "desc":[
         " I proudly possess a solid grasp of Information Technology, as evidenced by my achievements in key subjects like DS, Algorithms, DBMS, OS, CA, AI etc.",
         "I have done Several courses in Full Stack Development & Python with Industrial and RealLife Project.",

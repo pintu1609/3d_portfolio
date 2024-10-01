@@ -7,7 +7,7 @@ export default function Resume() {
     const [activeTab, setActiveTab] = useState('mywork');
     return (
         <div className="bg-bg-color min-h-screen w-full">
-        <div className="flex justify-center  py-8 ">
+        <div className="flex justify-center py-8 ">
         <div className="flex flex-col items-center w-4/5 gap-[2rem]">
 
         

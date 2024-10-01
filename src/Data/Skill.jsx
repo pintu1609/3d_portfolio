@@ -24,7 +24,7 @@ const skill=[
     },
     {
         title:'Next.js',
-        logo: <i class="ri-nextjs-line"></i>,
+        logos: "/image/nextdotjs.svg",
     },
     {
         title:'TypeScript',
@@ -37,7 +37,7 @@ const skill=[
     },
     {
         title:'Express.js',
-        logo: <i className='bx bxl-express' ></i>,
+        logos: "/image/express.svg",
     },
     {
         title:'MongoDB',
@@ -65,7 +65,7 @@ const skill=[
     }  ,
     {
         title:'Postman',
-        logo: <i className='bx bxl-postman' ></i>,
+        logos: "/image/postman.svg",
     },
     {
         title:'Python',
@@ -81,7 +81,10 @@ const skill=[
     },
     {
         title:'MySQL',
-        logo: <i class='bx bxl-mysql' ></i>,
+        logos: "/image/mysql.svg",
+    },{
+        title:'Pug',
+        logos: "/image/pug.svg",
     },
     {
         title:'Firebase',

@@ -5,7 +5,8 @@ const projectdata=[
     "title": "3D Portfolio Website",
     "duration":"Sep. 2024",
     "body":"A 3D portfolio showcases our work in an immersive, interactive format, allowing viewers to experience projects from multiple angles, enhancing engagement and providing a unique perspective on our skills.",
-    "projectlink":"https://github.com/pintu1609/hospital-management-system",
+    "projectlink":"https://github.com/pintu1609/3d_portfolio",
+    "preview":"",
     "user_id":1
   },
     {
@@ -15,6 +16,8 @@ const projectdata=[
         "duration":"Feb. 2023 - April 2023",
         "body":"Hospital Management System (HMS) streamlines appointments, enabling remote booking, doctor availability checks, and online payments. It boosts administrative efficiency, benefiting patients and healthcare providers alike. An indispensable tool for diverse healthcare facilities, HMS enhances the overall healthcare experience and operational effectiveness.",
         "projectlink":"https://github.com/pintu1609/hospital-management-system",
+        "preview":"",
+
         "user_id":2
       },
       {
@@ -24,6 +27,8 @@ const projectdata=[
         "duration":"June 2023 - June 2023",
         "body":"iNotebook revolutionizes note-taking. Seamlessly create, edit, and manage notes for enhanced organization. This digital notepad streamlines your tasks, from jotting ideas to setting tasks. Say goodbye to clutter and hello to productivity with iNotebook.",
         "projectlink":"https://github.com/pintu1609/iNotebook",
+        "preview":"",
+
         "user_id":3
 
       },
@@ -35,6 +40,8 @@ const projectdata=[
             "duration" :"July 2023 - July 2023",
             "body":"NewsMonkey is your go-to news app for quick, bite-sized daily updates. Whether you're passionate about current events, weather forecasts, politics, or sports news, NewsMonkey has you covered. Stay informed and up-to-date with a wide range of topics, all conveniently accessible in one app. Get your daily news fix with NewsMonkey and stay in the loop effortlessly.",
             "projectlink":"https://github.com/pintu1609/newsapp",
+            "preview":"",
+
             "user_id":4
 
         },
@@ -67,6 +74,8 @@ const projectdata=[
                   "duration":"Feb. 2022 - April 2022",
                   "body":"The Grader Android learning app enables users to take mock tests in various subjects, each containing different questions, all within a set time limit. Post-test, users can assess their scores, view leaderboard rankings, and bookmark questions for reference. Additionally, they can review correct answers to all questions, enhancing their learning experience. ",
                   "projectlink":"https://github.com/pintu1609/Learning-app-Grader",
+                  "preview":"",
+
                   "user_id":7
       
               }

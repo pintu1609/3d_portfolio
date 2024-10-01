@@ -19,6 +19,9 @@ const config: Config = {
         "main-white": "var(--main-white)",
         "tab-list-color": "var(--tab-list-color)",
       },
+      screens: {
+        'custom': '450px', // Custom breakpoint
+      },
     },
   },
   plugins: [],

@@ -4,6 +4,7 @@ import "./globals.css";
 import 'boxicons/css/boxicons.min.css';
 import './globals.css'; 
 import Navbar from "@/components/navbar/Navbar";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
       <main className="flex-grow">
+      <Toaster position="top-right" />
 
         {children}
         </main>

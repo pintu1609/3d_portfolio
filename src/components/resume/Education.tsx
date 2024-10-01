@@ -16,7 +16,7 @@ export default function Education() {
         </div>
 
         <div className="flex  flex-col justify-center items-center gap-2 mt-8 w-full">
-        <h3 className="text-3xl text-main-white font-bold underline underline-offset-8 underline-main-color">Degrees Recevied or Pursuing</h3>
+        <h3 className="text-xl custom:text-2xl sm:text-3xl text-center text-main-white font-bold underline underline-offset-8 underline-main-color">Degrees Recevied or Pursuing</h3>
        
 
         <div className="flex flex-col justify-center gap-2 w-full my-8" >
