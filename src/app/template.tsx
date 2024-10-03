@@ -19,7 +19,7 @@ const rotationMap: Record<string, Record<string, number>> = {
   "/resume": {
     "/home": 180,
     "/about": 90,
-    "/protfolio": -90,
+    "/portfolio": -90,
     "/contact": -180
   },
   "/portfolio": {
@@ -45,15 +45,17 @@ const Template = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     if (prevPath !== currentPath) {
-      const newRotation = rotationMap[prevPath]?.[currentPath] || 0;
-      setRotation(newRotation); // Set the rotation for the animation
+      const rotationChange = rotationMap[prevPath]?.[currentPath] || 0;
+      // Increment the rotation, so it adds to the previous rotation value
+      setRotation((prevRotation) => prevRotation + rotationChange); 
+      
       setIsTransitioning(true); // Start the transition
 
       // Wait for the rotation animation to complete before changing the route
       const timeout = setTimeout(() => {
-        setPrevPath(currentPath); // Change the path after the animation
+        setPrevPath(currentPath); // Update the path after the animation
         setIsTransitioning(false); // End transition state
-      }, 5000); // Match the timeout with your animation duration
+      }, 3000); // Match the timeout with your animation duration
 
       return () => clearTimeout(timeout); // Cleanup the timeout
     }
@@ -63,7 +65,7 @@ const Template = ({ children }: { children: React.ReactNode }) => {
     <div
       style={{
         width: "100vw",
-        height: "100vh",
+        // height: "100vh",
         perspective: "1000px",
         overflow: "hidden",
       }}
@@ -72,12 +74,13 @@ const Template = ({ children }: { children: React.ReactNode }) => {
       <motion.div
         style={{
           width: "100%",
-          height: "100%",
           transformStyle: "preserve-3d",
           position: "relative",
           transform: `rotateY(${rotation}deg)`,
+          //  transform: `rotateY(90deg)`,
+
           transformOrigin: "50% 50% -50vw",
-          transition: 'transform 5s ease', // Smooth transition
+          transition: 'transform 3s ease', // Smooth transition
         }}
       >
         {children}

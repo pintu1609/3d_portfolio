@@ -6,7 +6,7 @@ export default function About() {
        
 
                 
-        <div className=" bg-bg-color h-screen w-full ">
+        <div className=" bg-bg-color h-screen w-full overflow-y-auto">
         <div className="flex flex-col-reverse sm:flex-row-reverse justify-center items-center gap-[3rem] sm:gap-[5rem] h-full w-4/5 mx-auto h-full ">
             <div className="flex flex-col justify-start gap-2 ">
                 <h3 className="text-2xl text-main-white font-bold">About Me</h3>

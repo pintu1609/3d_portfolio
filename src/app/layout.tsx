@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+"use client";
 import localFont from "next/font/local";
 import "./globals.css";
 import 'boxicons/css/boxicons.min.css';
@@ -10,6 +10,9 @@ import Resume from "./resume/page";
 import Portfolio from "./portfolio/page";
 import Home from "./page";
 import Template from "./template";
+import Contact from "./contact/page";
+import { usePathname } from "next/navigation";
+import { metadata } from "./metsdata";
 
 
 const geistSans = localFont({
@@ -23,17 +26,37 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Portfolio of Pintu Kumar",
-};
+
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const currentPath = usePathname(); // Get the current path
   
+  
+  let activeFace;
+  switch (currentPath) {
+    case "/home":
+      activeFace = <div className="face front">{children}</div>;
+      break;
+    case "/about":
+      activeFace = <div className="face left">{children}</div>;
+      break;
+    case "/resume":
+      activeFace = <div className="face back">{children}</div>;
+      break;
+    case "/portfolio":
+      activeFace = <div className="face right">{children}</div>;
+      break;
+    case "/contact":
+      activeFace = <div className="face contact active">{children}</div>;
+      break;
+    // default:
+    //   activeFace = <div className="face front">{children}</div>; // Default to front if path doesn't match
+  }
+
   
   return (
     <html lang="en">
@@ -41,8 +64,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
 
+
     <Template>
         <div className='cube'>
+
         <div className="face front ">
         <Home/>
         </div>
@@ -58,23 +83,26 @@ export default function RootLayout({
          <About/>
 
           </div>
+          <div className={`face contact ${currentPath === "/contact" ? "active" : ""}`}>
+            <Contact/>
+          </div>
          
 
-        <main className="flex-grow transition-delay-500">
+        <main className="flex-grow transition-delay-500 overflow-auto">
       <Toaster position="top-right" />
 
 
-        {children}
-        </main>
+      {children}
+      </main>
        
           
 
+        </div>
+    </Template>
         <div className="fixed bottom-[2rem] left-[50%] translate-x-[-50%] z-10">
 
         <Navbar/>
         </div>
-        </div>
-    </Template>
       </body>
     </html>
   );
