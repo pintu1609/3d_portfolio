@@ -43,13 +43,13 @@ body {
 
 .cube {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   transform-style: preserve-3d;
   transform-origin: 50% 50% -50vw;
   transform: rotateY(0deg);
   animation: rotateCube 8s ease-in-out ;
-  transition: 8s;
+  transition: 5s;
 }
 
 .face {
@@ -75,23 +75,24 @@ body {
 
 }
 
-.left {
+.right {
   transform: rotateY(90deg) translateZ(50vw) translateX(50vw);
 
 }
 
-.right {
+.left {
   transform:   rotateY(270deg) translateZ(50vw) translateX(-50vw);
 
 }
 
-.face .contact {
-  transform: rotateY(270deg) translateZ(50vw);
-
+.contact {
+  width: 100vw;
 visibility: hidden;
-transition-delay: 1s;
+transition-delay: 0.1s;
 }
-.face .contact .active{
+.contact.active{
+  transform: rotateY(0deg)  translate(0vw);;
+
   visibility: visible;
 }
 
@@ -109,7 +110,7 @@ transition-delay: 1s;
 
 @keyframes routerotateCube {
   from {
-    transform:scaleX(1) scaleY(1) rotateY(0deg);
+    transform:scaleX(0) scaleY(0) rotateY(0deg);
   }
   to {
     transform: scaleX(1) scaleY(1) rotateY(-90);

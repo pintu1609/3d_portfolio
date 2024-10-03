@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Portfolio() {
     const [activeTab, setActiveTab] = useState('mywork');
     return (
-        <div className="bg-bg-color h-screen w-full overflow-y-auto">
+        <div className="bg-bg-color h-screen w-full overflow-y-auto transform-rotate-180">
         <div className="flex justify-center py-8 ">
         <div className="flex flex-col items-center w-4/5 gap-[2rem]">
 
@@ -25,12 +25,11 @@ export default function Portfolio() {
                             <div className={`flex-1 ${activeTab === 'myservices' ? 'bg-main-color' : 'bg-tab-list-color'} cursor-pointer`} onClick={() => setActiveTab('myservices')} />
              </div>
 
-{/* <div className=" h-[`calc(100vh - 50rem)`] overflow-y-auto"> */}
 
-            {activeTab === 'mywork' && <MyWork/>}
-            {activeTab === 'myservices' && <Myservices />}
-
-{/* </div> */}
+             <div className="flex-1 overflow-y-auto"> {/* Allow scrolling here */}
+                                {activeTab === 'mywork' && <MyWork />}
+                                {activeTab === 'myservices' && <Myservices />}
+                            </div>
 
         </div>
 

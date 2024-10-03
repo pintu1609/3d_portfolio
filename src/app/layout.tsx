@@ -8,7 +8,7 @@ import { Toaster } from "react-hot-toast";
 import About from "./about/page";
 import Resume from "./resume/page";
 import Portfolio from "./portfolio/page";
-import Home from "./page";
+import Home from "./home/page";
 import Template from "./template";
 import Contact from "./contact/page";
 import { usePathname } from "next/navigation";
@@ -51,11 +51,13 @@ export default function RootLayout({
       activeFace = <div className="face right">{children}</div>;
       break;
     case "/contact":
-      activeFace = <div className="face contact active">{children}</div>;
+      activeFace = <div className="face contact ">{children}</div>;
       break;
     // default:
     //   activeFace = <div className="face front">{children}</div>; // Default to front if path doesn't match
   }
+
+  
 
   
   return (
@@ -66,12 +68,14 @@ export default function RootLayout({
 
 
     <Template>
+
         <div className='cube'>
+              <Toaster position="top-right" />
 
         <div className="face front ">
         <Home/>
         </div>
-        <div className="face right">
+        <div className="face left">
         <Portfolio/>
 
           </div>
@@ -79,21 +83,24 @@ export default function RootLayout({
             <Resume/>
           </div>
 
-         <div className="face left ">
+         <div className="face right ">
          <About/>
 
           </div>
-          <div className={`face contact ${currentPath === "/contact" ? "active" : ""}`}>
+          <div className="face">
+
+          <div className={` contact ${currentPath === "/contact" ? "active" : ""}`}>
             <Contact/>
+          </div>
           </div>
          
 
-        <main className="flex-grow transition-delay-500 overflow-auto">
-      <Toaster position="top-right" />
+        {/* <main className="flex-grow transition-delay-500 overflow-auto">
 
 
       {children}
-      </main>
+      </main> */}
+
        
           
 
