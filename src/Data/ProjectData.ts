@@ -27,7 +27,7 @@ const projectdata=[
         "duration":"June 2023 - June 2023",
         "body":"iNotebook revolutionizes note-taking. Seamlessly create, edit, and manage notes for enhanced organization. This digital notepad streamlines your tasks, from jotting ideas to setting tasks. Say goodbye to clutter and hello to productivity with iNotebook.",
         "projectlink":"https://github.com/pintu1609/iNotebook",
-        "preview":"",
+        "preview":"https://pintu-inotebook.vercel.app/login",
 
         "user_id":3
 
@@ -40,7 +40,7 @@ const projectdata=[
             "duration" :"July 2023 - July 2023",
             "body":"NewsMonkey is your go-to news app for quick, bite-sized daily updates. Whether you're passionate about current events, weather forecasts, politics, or sports news, NewsMonkey has you covered. Stay informed and up-to-date with a wide range of topics, all conveniently accessible in one app. Get your daily news fix with NewsMonkey and stay in the loop effortlessly.",
             "projectlink":"https://github.com/pintu1609/newsapp",
-            "preview":"",
+            "preview":"https://pintu-newsapp.vercel.app/",
 
             "user_id":4
 

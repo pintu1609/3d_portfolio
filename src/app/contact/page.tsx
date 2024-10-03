@@ -39,7 +39,7 @@ export default function Contact() {
     })
 
     return (
-        <div className=" bg-bg-color flex justify-center min-h-screen">
+        <div className=" bg-bg-color flex justify-center min-h-screen w-full">
             <div className="flex flex-col items-center gap-4 w-[90%] md:w-3/5 py-16">
 
                 <h2 className="text-3xl text-main-white font-bold">Contact</h2>

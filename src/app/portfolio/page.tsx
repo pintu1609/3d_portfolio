@@ -3,7 +3,7 @@ import MyWork from "@/components/portfolio/MyWork";
 import Myservices from "@/components/portfolio/MyService";
 import { useState } from "react";
 
-export default function Resume() {
+export default function Portfolio() {
     const [activeTab, setActiveTab] = useState('mywork');
     return (
         <div className="bg-bg-color min-h-screen w-full">

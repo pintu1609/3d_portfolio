@@ -27,6 +27,7 @@ body {
   background: var(--background);
 
   font-family: Arial, Helvetica, sans-serif;
+  perspective: 1000px;
 }
 
 @layer utilities {
@@ -34,3 +35,77 @@ body {
     text-wrap: balance;
   }
 }
+
+   /* Perspective for 3D effect */
+  
+
+ 
+
+.cube {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% -50vw;
+  transform: rotateY(0deg);
+  animation: rotateCube 8s ease-in-out ;
+  transition: 8s;
+}
+
+.face {
+    position: absolute;
+    width: 100vw;
+    /* height: 500px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+/* Positioning the cube faces */
+
+.front {
+  transform: rotateY(0deg)  translate(0vw);;
+}
+
+.back {
+
+  transform: rotateY(180deg) translateZ(100vw) translateX(0vw);
+
+}
+
+.left {
+  transform: rotateY(90deg) translateZ(50vw) translateX(50vw);
+
+}
+
+.right {
+  transform:   rotateY(270deg) translateZ(50vw) translateX(-50vw);
+
+}
+
+
+/* Scale animation */
+@keyframes rotateCube {
+  from {
+    transform:  scaleX(0) scaleY(0) rotateY(0deg);
+  }
+  to {
+    transform: scaleX(1) scaleY(1) rotateY(-360deg);
+  }
+}
+
+
+@keyframes routerotateCube {
+  from {
+    transform:scaleX(1) scaleY(1) rotateY(0deg);
+  }
+  to {
+    transform: scaleX(1) scaleY(1) rotateY(-90);
+  }
+}
+
+.cuberoute {
+  animation: routerotateCube 0.5s forwards; /* Change duration as needed */
+}
+
