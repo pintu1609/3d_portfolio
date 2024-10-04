@@ -1,13 +1,12 @@
 "use client";
 import { motion } from 'framer-motion';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
 // Sample navigation array (navs) to simulate the `idx` logic
 const navs = ["/home", "/about", "/resume", "/portfolio", "/contact"];
 
 const Template = ({ children }: { children: React.ReactNode }) => {
-  const router = useRouter();
   const currentPath = usePathname();
   const [rotation, setRotation] = useState(0); // Cube rotation state
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -40,11 +39,10 @@ const Template = ({ children }: { children: React.ReactNode }) => {
         perspective: "1000px",
         overflow: "hidden",
       }}
-      // className="cuberoute"
     >
       <motion.div
         style={{
-          width: "100%",
+         
           transformStyle: "preserve-3d",
           position: "relative",
           transform: `rotateY(${rotation}deg)`, // Rotate based on index
