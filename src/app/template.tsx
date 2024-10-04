@@ -9,7 +9,7 @@ const navs = ["/home", "/about", "/resume", "/portfolio", "/contact"];
 const Template = ({ children }: { children: React.ReactNode }) => {
   const currentPath = usePathname();
   const [rotation, setRotation] = useState(0); // Cube rotation state
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  // const [isTransitioning, setIsTransitioning] = useState(false);
   
   useEffect(() => {
     // Find the current index of the currentPath
@@ -20,14 +20,14 @@ const Template = ({ children }: { children: React.ReactNode }) => {
       const newRotation = currentIndex * -90;
       
       setRotation(newRotation); // Set rotation based on index
-      setIsTransitioning(true); // Start the transition
+      // setIsTransitioning(true); // Start the transition
 
       // Optional: Wait for the rotation animation to complete before further changes
-      const timeout = setTimeout(() => {
-        setIsTransitioning(false); // End transition
-      }, 3000); // Match the timeout with your animation duration
+      // const timeout = setTimeout(() => {
+      //   // setIsTransitioning(false); // End transition
+      // }, 3000); // Match the timeout with your animation duration
 
-      return () => clearTimeout(timeout); // Cleanup the timeout
+      // return () => clearTimeout(timeout); // Cleanup the timeout
     }
   }, [currentPath]);
 
@@ -42,10 +42,9 @@ const Template = ({ children }: { children: React.ReactNode }) => {
     // >
       <motion.div
         style={{
-         
           transformStyle: "preserve-3d",
           position: "relative",
-          transform: `rotateY(${rotation}deg)`, // Rotate based on index
+          transform: `rotateY(${rotation}deg)`, // Rotate based on index and move back in Z-axis
           transformOrigin: "50% 50% -50vw",
           transition: "transform 3s ease", // Smooth rotation transition
         }}

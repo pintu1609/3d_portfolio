@@ -1,5 +1,5 @@
 "use client";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Home from "@/app/home/page";
 import About from "@/app/about/page";
 import Portfolio from "@/app/portfolio/page";

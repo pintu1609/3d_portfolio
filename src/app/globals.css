@@ -61,6 +61,7 @@ body {
     justify-content: center;
     /* backface-visibility: hidden */
     overflow-y: auto;
+    backface-visibility: visible;
 }
 
 /* Positioning the cube faces */
