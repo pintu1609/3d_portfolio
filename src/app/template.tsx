@@ -32,14 +32,14 @@ const Template = ({ children }: { children: React.ReactNode }) => {
   }, [currentPath]);
 
   return (
-    <div
-      style={{
-        width: "100vw",
-        height: "100vh",
-        perspective: "1000px",
-        overflow: "hidden",
-      }}
-    >
+    // <div
+    //   style={{
+    //     width: "100vw",
+    //     height: "100vh",
+    //     perspective: "1000px",
+    //     overflow: "hidden",
+    //   }}
+    // >
       <motion.div
         style={{
          
@@ -52,7 +52,6 @@ const Template = ({ children }: { children: React.ReactNode }) => {
       >
         {children}
       </motion.div>
-    </div>
   );
 };
 

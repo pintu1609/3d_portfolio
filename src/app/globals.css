@@ -117,3 +117,21 @@ transition-delay: 0.5s;
 
 
 
+.animate-nav {
+  animation: nav-animation 1s ease-in-out backwards;
+  animation-delay: 5s;
+
+}
+
+@keyframes nav-animation {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
