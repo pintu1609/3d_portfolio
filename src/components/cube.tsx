@@ -6,12 +6,14 @@ import Portfolio from "@/app/portfolio/page";
 import Resume from "@/app/resume/page";
 import Contact from "@/app/contact/page";
 import { usePathname } from "next/navigation";
+import Template from "@/app/template";
 
 const Cube = () => {
   const currentPath = usePathname();
   console.log("🚀 ~ Cube ~ path:", currentPath)
   
   const [contactClass, setContactClass] = useState<string>("active"); // Start with 'active' class for contact
+  
 
   useEffect(() => {
     // Remove 'active' class after 1.5 seconds
@@ -31,20 +33,25 @@ const Cube = () => {
 
   return (
     <div className="cube">
-      <div className="face front">
+
+      <div className="face">
+        <Template>
+      <div className="front">
         <Home />
       </div>
-      <div className="face left">
+      <div className="left">
         <Portfolio />
       </div>
-      <div className="face back">
+      <div className="back">
         <Resume />
       </div>
-      <div className="face right">
+      <div className="right">
         <About />
       </div>
-      <div className={`face contact ${contactClass} ${contactPageClass}`}>
+      <div className={` contact ${contactClass} ${contactPageClass}`}>
         <Contact />
+      </div>
+      </Template>
       </div>
     </div>
   );

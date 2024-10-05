@@ -10,7 +10,7 @@ export default function Resume() {
 
      
 
-        <div className="bg-bg-color h-screen w-full overflow-y-auto">
+        <div className="bg-bg-color h-screen w-full">
         <div className="flex justify-center  py-8 ">
         <div className="flex flex-col items-center w-4/5 gap-[2rem]">
 
@@ -31,14 +31,14 @@ export default function Resume() {
                             <div className={`flex-1 ${activeTab === 'education' ? 'bg-main-color' : 'bg-tab-list-color'} cursor-pointer`} onClick={() => setActiveTab('education')} />
              </div>
 
-             {/* <div className=" h-[`calc(100vh - 50rem)`] overflow-y-auto"> */}
+             <div className="overflow-y-auto scrollbar scrollbar-thumb-main-color scrollbar-track-main-color  " style={{height:`calc(100vh - 16rem)`}}>
 
 
             {activeTab === 'experince' && <Experience />}
             {activeTab === 'skills' && <Skill />}
             {activeTab === 'education' && <Education />}
 
-            {/* </div> */}
+            </div>
 
         </div>
 

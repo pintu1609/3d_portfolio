@@ -27,7 +27,6 @@ body {
   background: var(--background);
 
   font-family: Arial, Helvetica, sans-serif;
-  perspective: 1000px;
 }
 
 @layer utilities {
@@ -44,57 +43,70 @@ body {
 .cube {
   width: 100vw;
   height: 100vh;
-  position: relative;
-  transform-style: preserve-3d;
-  transform-origin: 50% 50% -50vw;
-  transform: rotateY(0deg);
-  animation: rotateCube 5s ease-in-out backwards ;
-  transition: 2s;
+  
+  perspective: 1000px;
+  
 }
 
 .face {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  transform-origin: 50% 50% -50vw;
+  transform: rotateY(0deg);
+  animation: rotateCube 5s ease-in-out backwards ;
+    transition: 2s;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    /* backface-visibility: hidden */
     overflow-y: auto;
-    backface-visibility: visible;
+    backface-visibility: visible; */
 }
 
 /* Positioning the cube faces */
 
 .front {
-  transform: rotateY(0deg)  translate(0vw);
+  width: 100vw;
+  position: absolute;
+  transform: rotateY(0deg)  ;
+  backface-visibility: hidden;
 
 }
 
 .back {
-
-  transform: rotateY(180deg) translateZ(100vw) translateX(0vw);
+  width: 100vw;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg) translateZ(100vw);
 
 }
 
 .right {
+  width: 100vw;
+  position: absolute;
+  backface-visibility: hidden;
   transform: rotateY(90deg) translateZ(50vw) translateX(50vw);
 
 }
 
 .left {
+  width: 100vw;
+  position: absolute;
+  backface-visibility: hidden;
   transform:   rotateY(270deg) translateZ(50vw) translateX(-50vw);
 
 }
 
 .contact {
+  position: absolute;
+  backface-visibility: hidden;
   width: 100vw;
 visibility: hidden;
 transition-delay: 0.5s;
 }
 .contact.active{
   transform: rotateY(0deg)  translate(0vw);;
-
   visibility: visible;
 }
 .contact.action-contact{

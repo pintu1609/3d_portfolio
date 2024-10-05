@@ -4,7 +4,6 @@ import 'boxicons/css/boxicons.min.css';
 import './globals.css'; 
 import Navbar from "@/components/navbar/Navbar";
 import { Toaster } from "react-hot-toast";
-import Template from "./template";
 import Cube from "@/components/cube";
 
 
@@ -28,11 +27,9 @@ export default function RootLayout() {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Template>
         <Cube />
 
 
-        </Template>
 
         <div className="fixed bottom-[2rem] left-[50%] translate-x-[-50%] z-10 animate-nav">
           <Navbar />

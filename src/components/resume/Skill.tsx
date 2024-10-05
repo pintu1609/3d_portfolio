@@ -2,7 +2,7 @@ import skill from "@/Data/Skill";
 
 export default function Skill() {
     return (
-        <div className="flex flex-col  mt-8">
+        <div className="flex flex-col  mt-4">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 w-full" >
             {skill?.map((item, index) => (
                 <div className="flex flex-col gap-3 bg-tab-list-color px-4 py-2 rounded-md justify-center items-center" key={index}>
