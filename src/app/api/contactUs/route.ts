@@ -45,7 +45,6 @@ export  async function POST(
             },
           });
           
-          console.log("🚀 ~ process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL:", process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL)
           const subject = 'New Contact Form Submission';
           const desc = `Hi Pintu,
           
@@ -67,7 +66,7 @@ export  async function POST(
 
 
     } catch (error) {
-      console.log("🚀 ~ error:", error)
+      console.error("🚀 ~ error:", error)
       return NextResponse.json({ message: 'Something went wrong' }, { status: 500 });
     }
         
