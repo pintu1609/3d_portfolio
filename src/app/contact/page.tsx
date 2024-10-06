@@ -24,8 +24,12 @@ export default function Contact() {
                 console.log("🚀 ~ ContactSale ~ response:", response)
                 if (!response.ok) {
                     console.error('Error adding email to Google Sheets');
+                    toast.error('Error adding email to Google Sheets');
+                    setLoading(false);
+                    return;
 
                 }
+
                 resetForm();
                 setLoading(false);
                 toast.success('Message Added successfully!');
