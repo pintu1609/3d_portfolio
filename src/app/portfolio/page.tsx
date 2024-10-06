@@ -26,7 +26,7 @@ export default function Portfolio() {
              </div>
 
 
-             <div className="overflow-y-auto scrollbar scrollbar-thumb-main-color scrollbar-track-main-color" style={{height:`calc(100vh - 16rem)`}}>
+             <div className="overflow-y-auto " style={{height:`calc(100vh - 16rem)`}}>
                                 {activeTab === 'mywork' && <MyWork />}
                                 {activeTab === 'myservices' && <Myservices />}
                             </div>

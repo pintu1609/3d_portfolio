@@ -8,7 +8,7 @@ type Email = {
 };
 
 export async function sendEmail({ subject, desc }: Email) {
-    const email = process.env.NEXT_PUBLIC_EMAIL_RECEIVER; // Correct the variable name if necessary
+    const email = process.env.NEXT_PUBLIC_EMAIL_RECEVIER; // Correct the variable name if necessary
 
     if (!email || !process.env.NEXT_PUBLIC_EMAIL_USER) {
         throw new Error('Email receiver or user not defined in environment variables.');
