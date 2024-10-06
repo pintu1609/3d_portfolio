@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 interface EducationItemProps {
@@ -16,7 +17,7 @@ const EducationItem: React.FC<EducationItemProps> = ({item})=> {
     return (
         <div className="flex md:flex-row flex-col items-center w-full gap-4 bg-tab-list-color p-4 rounded-md">
             <div className="w-full sm:w-2/5 lg:w-1/5  overflow-hidden flex items-center justify-center  ">
-                <img src={item?.image} alt="" className="w-[12rem] h-[12rem] md:w-[10rem] md:h-[10rem] object-cover rounded-full" />
+                <Image src={item?.image} alt="" className="w-[12rem] h-[12rem] md:w-[10rem] md:h-[10rem] object-cover rounded-full" />
             </div>
 
         <div className="flex flex-col justify-start gap-2  w-full">

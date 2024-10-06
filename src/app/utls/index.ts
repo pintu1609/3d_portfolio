@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.NEXT_PUBLIC_API_KEY as string); // Ensure it's treated as a string
+const resend = new Resend(process.env.API_KEY as string); // Ensure it's treated as a string
 
 type Email = {
     subject: string;
@@ -8,14 +8,14 @@ type Email = {
 };
 
 export async function sendEmail({ subject, desc }: Email) {
-    const email = process.env.NEXT_PUBLIC_EMAIL_RECEVIER; // Correct the variable name if necessary
+    const email = process.env.EMAIL_RECEVIER; // Correct the variable name if necessary
 
-    if (!email || !process.env.NEXT_PUBLIC_EMAIL_USER) {
+    if (!email || !process.env.EMAIL_USER) {
         throw new Error('Email receiver or user not defined in environment variables.');
     }
 
     const messageData = {
-        from: process.env.NEXT_PUBLIC_EMAIL_USER,
+        from: process.env.EMAIL_USER,
         to: email,
         subject: subject,
         text: desc,

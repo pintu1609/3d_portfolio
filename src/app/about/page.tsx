@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 
 export default function About() {
     return (
@@ -27,8 +29,7 @@ export default function About() {
             </div>
             <div className="rounded-full border-4 border-main-color overflow-hidden shadow-[0_0_1rem_0_#0ef] transition duration-300">
             
-                <img src="/image/Pintu_Kumar.jpeg" alt="pintu"  className="w-full h-full object-cover" 
-                 />
+                <Image  src="/image/Pintu_Kumar.jpeg" alt="pintu"  className="w-full h-full object-cover" />
             </div>
         </div>
         </div>

@@ -1,4 +1,4 @@
-const certificateData =[
+export const certificateData =[
     {
       "imageUrl": "https://drive.google.com/file/d/1TEUDUGdNNcM3gFrFqwyNlZIjZWPZGAC2/view?usp=drive_link",
       "title": "Data Structure",
@@ -20,12 +20,12 @@ const certificateData =[
     
   ]
 
-  const degreeData =[
+  export const degreeData =[
     {
       "link": "https://cic.du.ac.in/",
       "title": "Cluster Innovation Centre, University Of Delhi",
       "subtitle":"University Of Delhi(CIC)",
-      "image": "/Image/du.jpeg",
+      "image": "/image/du.jpeg",
       "duration":"2020 - 2024",
       "cource":"B.Tech in Information Technology & Mathematical Innovation",
       "subcourse":"B.Tech(IT & MI)",
@@ -38,4 +38,3 @@ const certificateData =[
      
     },
   ]
-  export default {certificateData , degreeData};

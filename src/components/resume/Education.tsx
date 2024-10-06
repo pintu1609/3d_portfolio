@@ -1,4 +1,4 @@
-import EducationData from "@/Data/EducationData";
+import {certificateData,degreeData} from "@/Data/EducationData";
 import EducationItem from "./EducationItem";
 import EducationCourseItem from "./EducationCourseItem";
 
@@ -6,7 +6,7 @@ export default function Education() {
     return (
         <div className="flex flex-col  mt-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 w-full" >
-            {EducationData?.certificateData?.map((item, index) => (
+            {certificateData?.map((item, index) => (
                 <EducationCourseItem item={item} key={index}/>
                 
             ))}
@@ -20,7 +20,7 @@ export default function Education() {
        
 
         <div className="flex flex-col justify-center gap-2 w-full my-8" >
-            {EducationData?.degreeData?.map((item, index) => (
+            {degreeData?.map((item, index) => (
                 <EducationItem item={item} key={index}/>
                 
             ))}

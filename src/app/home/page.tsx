@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link";
 import './home.css'
+import Image from "next/image";
 
 export default function Home() {
     return (
@@ -62,7 +63,7 @@ export default function Home() {
             </div>
             <div className="rounded-full border-4 border-main-color overflow-hidden shadow-[0_0_1rem_0_#0ef] transition duration-300 hover:shadow-[0_0_3rem_0_#0ef]">
             
-                <img src="/image/Pintu_Kumar.jpeg" alt="pintu"  className="w-full h-full object-cover" 
+                <Image  src="/image/Pintu_Kumar.jpeg" alt="pintu"  className="w-full h-full object-cover" 
                  />
             </div>
         </div>

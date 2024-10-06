@@ -1,4 +1,5 @@
 import skill from "@/Data/Skill";
+import Image from "next/image";
 
 export default function Skill() {
     return (
@@ -6,7 +7,7 @@ export default function Skill() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 w-full" >
             {skill?.map((item, index) => (
                 <div className="flex flex-col gap-3 bg-tab-list-color px-4 py-2 rounded-md justify-center items-center" key={index}>
-                    {item?.logos && <img src={item?.logos} alt="" 
+                    {item?.logos && <Image src={item?.logos} alt="" 
                      className="transition duration-300 ease-in-out filter hover:filter-none" 
                      style={{ filter: "invert(100%) sepia(8%) saturate(0%) hue-rotate(46deg) brightness(105%) contrast(110%)" }} 
                      onMouseLeave={(e) => {

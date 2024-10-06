@@ -1,5 +1,6 @@
 import React from 'react';
 import './workItem.css';
+import Image from 'next/image';
 
 interface WorkItemProps {
     item: {
@@ -17,9 +18,9 @@ const WorkItem: React.FC<WorkItemProps> = ({ item }) => {
     return (
         <div className="relative group"> {/* Keep the group class for hover effects */}
             <div className="rounded-md h-[16rem] overflow-hidden duration-300">
-                <img
+                <Image
                     src={item?.image}
-                    alt="img"
+                    alt="imgage"
                     className="transition-transform duration-300 group-hover:scale-[1.1] w-full h-full"
                 />
             </div>
