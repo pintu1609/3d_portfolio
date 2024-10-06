@@ -10,13 +10,13 @@ type ContactUs = {
   message: string,
 }
 export  async function POST(
-    
-    req:Request,
+  
+  req:Request,
 ) {
   
-    const body: ContactUs = await req.json();
-
-    const data = [[
+  const body: ContactUs = await req.json();
+  
+  const data = [[
       
       body.fullName,
         body.email,
@@ -26,6 +26,7 @@ export  async function POST(
     ]]
 
     try {
+
         const auth = new google.auth.GoogleAuth({
             credentials: {
               client_email: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL,
@@ -34,7 +35,7 @@ export  async function POST(
             scopes: ['https://www.googleapis.com/auth/spreadsheets'],
           });
           const googleSheetClient = google.sheets({ version: "v4", auth });
-            const response = await googleSheetClient.spreadsheets.values.append({
+          const response = await googleSheetClient.spreadsheets.values.append({
             spreadsheetId: process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID,
             range: 'Sheet3!A1',
             valueInputOption: 'USER_ENTERED',
@@ -43,10 +44,11 @@ export  async function POST(
               values: data,
             },
           });
-
-         const subject = 'New Contact Form Submission';
-         const desc = `Hi Pintu,
-
+          
+          console.log("🚀 ~ process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL:", process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL)
+          const subject = 'New Contact Form Submission';
+          const desc = `Hi Pintu,
+          
          You have a new contact form submission with the following details:
          
          - **Full Name:** ${body.fullName}
