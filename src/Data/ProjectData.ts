@@ -10,13 +10,13 @@ const projectdata=[
     "user_id":1
   },
     {
-        "image":'/image/3dWebsite.jpg',
+        "image":'/image/hms.jpg',
         "tools":"HTML, CSS, JavaScript, PHP, MySQL",
         "title": "Hospital Management System",
         "duration":"Feb. 2023 - April 2023",
         "body":"Hospital Management System (HMS) streamlines appointments, enabling remote booking, doctor availability checks, and online payments. It boosts administrative efficiency, benefiting patients and healthcare providers alike. An indispensable tool for diverse healthcare facilities, HMS enhances the overall healthcare experience and operational effectiveness.",
         "projectlink":"https://github.com/pintu1609/hospital-management-system",
-        "preview":"",
+        "preview":"https://drive.google.com/file/d/1stxYOGGSCh06xSsAHZxhNhIaV9qEPdCy/view?usp=sharing",
 
         "user_id":2
       },
@@ -68,7 +68,7 @@ const projectdata=[
     
             },
             {
-              "image":'/image/3dWebsite.jpg',
+              "image":'/image/grader.png',
               "tools":"Android, Java,Firebase",
                   "title":"Learning App:Grader",
                   "duration":"Feb. 2022 - April 2022",

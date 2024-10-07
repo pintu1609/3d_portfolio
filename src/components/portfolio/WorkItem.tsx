@@ -22,6 +22,9 @@ const WorkItem: React.FC<WorkItemProps> = ({ item }) => {
                     src={item?.image}
                     alt="imgage"
                     className="transition-transform duration-300 group-hover:scale-[1.1] w-full h-full"
+                    width={100}
+                    height={100}
+                    quality={100}
                 />
             </div>
             <div className="absolute inset-0 flex items-center justify-center bg-third-bg-color rounded-md opacity-0 group-hover:opacity-90 transition-opacity duration-300"> {/* Opacity is controlled by hover */}
@@ -40,12 +43,12 @@ const WorkItem: React.FC<WorkItemProps> = ({ item }) => {
                     <div className="flex align-center gap-2">
                         <div className="flex items-center justify-center bg-main-white rounded-full h-[2.5rem] w-[2.5rem] hover:bg-main-color relative preview-group cursor-pointer" onClick={() => window.open(item?.preview)}>
                             <i className='bx bx-arrow-back text-2xl rotate-[135deg]'></i>
-                            <span className="absolute top-[-2rem] left-[30%] transform -translate-x-[30%] py-[0.2rem] px-[0.5rem] rounded-md bg-main-color opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm whitespace-nowrap pointer-events-none">Preview</span>
+                            <span className="absolute top-[-2rem] left-[30%] transform -translate-x-[30%] py-[0.2rem] px-[0.5rem] rounded-md bg-main-color opacity-0 preview-group-hover:opacity-100 transition-opacity duration-300 text-sm whitespace-nowrap pointer-events-none">Preview</span>
                         </div>
                         {item?.projectlink && (
                             <div className="flex items-center justify-center bg-main-white rounded-full h-[2.5rem] w-[2.5rem] hover:bg-main-color relative github-group cursor-pointer" onClick={() => window.open(item?.projectlink)}>
                                 <i className='bx bxl-github text-2xl'></i>
-                                <span className="absolute top-[-2rem] left-[50%] transform -translate-x-1/2 py-[0.2rem] px-[0.5rem] rounded-md bg-main-color opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm whitespace-nowrap pointer-events-none">Github Repository</span>
+                                <span className="absolute top-[-2rem] left-[50%] transform -translate-x-1/2 py-[0.2rem] px-[0.5rem] rounded-md bg-main-color opacity-0 github-group-hover:opacity-100 transition-opacity duration-300 text-sm whitespace-nowrap pointer-events-none">Github Repository</span>
                             </div>
                         )}
                     </div>

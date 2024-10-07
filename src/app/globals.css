@@ -12,6 +12,7 @@
     ---main-color:#0ef;
     --main-white:#fff;
     --tab-list-color:#7c8594;
+    --title-color:#00c6ba;
 }
 
 @media (prefers-color-scheme: dark) {

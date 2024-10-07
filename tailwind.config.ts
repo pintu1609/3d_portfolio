@@ -18,6 +18,7 @@ const config: Config = {
         "main-color": "var(---main-color)",
         "main-white": "var(--main-white)",
         "tab-list-color": "var(--tab-list-color)",
+        "title-color": "var(--title-color)",
       },
       screens: {
         'custom': '450px', // Custom breakpoint

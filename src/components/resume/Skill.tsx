@@ -16,6 +16,7 @@ export default function Skill() {
                      onMouseEnter={(e) => {
                        e.currentTarget.style.filter = "invert(87%) sepia(27%) saturate(6948%) hue-rotate(134deg) brightness(99%) contrast(109%)";
                      }}
+                     width={50} height={50}
                      />
             }
                     {item?.logo &&
