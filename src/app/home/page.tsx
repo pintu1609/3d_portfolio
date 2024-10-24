@@ -52,7 +52,7 @@ export default function Home() {
                     //     transition:'.3s'
                     // }}
 
-                     onClick={() => window.open('https://drive.google.com/file/d/164poiHCDq-WMyHqZEN39cB_UZut96yDM/view')}>Download CV</button>
+                     onClick={() => window.open('https://drive.google.com/file/d/1gwtpz0ot7IOY26uofoFrMkU77R1qAWN5/view?usp=drive_link')}>Download CV</button>
 
                     <div className="flex space-x-4">
                     <Link href="https://github.com/pintu1609" passHref className="group flex items-center justify-center relative border border-main-color p-2 rounded-full h-[50px] w-[50px] hover:bg-main-color">

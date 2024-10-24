@@ -149,3 +149,22 @@ transition-delay: 0.5s;
 }
 
 
+
+/* For Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color); /* Change thumb color */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--second-bg-color);
+}
+
+/* For Firefox */
+/* scrollbar-width: thin;
+scrollbar-color: var(--main-color) var(--second-bg-color); */
+
