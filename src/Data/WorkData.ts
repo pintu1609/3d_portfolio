@@ -31,6 +31,16 @@ const work=[
         "body":"I developed the front-end of an ICU digitization website using React and Bootstrap, connected it to the back-end with JavaScript, and resolved Cors errors in the ISAPI Protocol, improving website functionality",
         "user_id":3
       },
+      {
+        "image": "/Images/mantra.jpeg",
+        "type":"WFH",
+        "title": "Frontend Developer",
+        "company":"Novus Aurelius",
+        "duration":"Jan. 2023 - Jun. 2023",
+        "location":"Internship",
+        "body":"As a Frontend Developer Intern at Novus Aurelius, I designed responsive UIs with ReactJS, integrated real-time stock data, implemented interactive graphs, and optimized key sections like Blog and Pricing to enhance user experience and performance across devices.",
+        "user_id":4
+      },
 
       {
         "image":"/Images/cic-du.png",
@@ -41,7 +51,7 @@ const work=[
         "location":"Internship",
         "body":"E-commerce, powered by mobile technology, reshapes global shopping habits. 'thecart,' an Android app, simplifies online shopping with product sections, banners, tracking, and Firebase data management, fueling the rapid growth of the E-commerce market.",
         // "projectlink":"https://github.com/rajandu/thecart2",
-        "user_id":4
+        "user_id":5
 
     }
 
