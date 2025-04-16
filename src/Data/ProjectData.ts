@@ -9,6 +9,16 @@ const projectdata=[
     "preview":"https://pintukumar.vercel.app/",
     "user_id":1
   },
+  {
+    "image":'/image/chatting_app.png',
+    "tools":"HTML, CSS, JavaScript, React.js,Tailwind, Node, Socket.io, MongoDB",
+    "title": "Chatting Web App",
+    "duration":"Dec. 2023 - Jan. 2024",
+    "body":"Create a dynamic real-time chatting app with React, Node.js, MongoDB, and Socket.io. Utilize React for the frontend, Node.js for the server, MongoDB for data storage, and Socket.io for seamless, instant communication between users.Create a dynamic real-time chatting app with React, Node.js, MongoDB, and Socket.io. Utilize React for the frontend, Node.js for the server, MongoDB for data storage, and Socket.io for seamless, instant communication between users.",
+    "projectlink":"https://github.com/pintu1609/chatting-app",
+    "preview":"https://chatting-app-frontend-five.vercel.app/",
+    "user_id":2
+  },
     {
         "image":'/image/hms.jpg',
         "tools":"HTML, CSS, JavaScript, PHP, MySQL",
@@ -18,7 +28,7 @@ const projectdata=[
         "projectlink":"https://github.com/pintu1609/hospital-management-system",
         "preview":"https://drive.google.com/file/d/1stxYOGGSCh06xSsAHZxhNhIaV9qEPdCy/view?usp=sharing",
 
-        "user_id":2
+        "user_id":3
       },
       {
         "image":'/image/inotebook.png',
@@ -29,7 +39,7 @@ const projectdata=[
         "projectlink":"https://github.com/pintu1609/iNotebook",
         "preview":"https://pintu-inotebook.vercel.app/login",
 
-        "user_id":3
+        "user_id":4
 
       },
      
@@ -42,7 +52,7 @@ const projectdata=[
             "projectlink":"https://github.com/pintu1609/newsapp",
             "preview":"https://pintu-newsapp.vercel.app/",
 
-            "user_id":4
+            "user_id":5
 
         },
         {
@@ -53,7 +63,7 @@ const projectdata=[
               "body":"The paper uses Recursive Neural Networks to build two classifiers: one to identify Technology Determinism or Skepticism and another for Pro or Anti Policy sentiment in media. It employs natural language processing to detect biases in media and predict sentiment, delving into complex language nuances.",
               "preview":"https://jmscm.smartsociety.org/volume4_issue3/paper8.pdf",
               
-              "user_id":5
+              "user_id":6
   
           },
           {
@@ -64,7 +74,7 @@ const projectdata=[
                 "duration":"Jan. 2023 - April 2023",
                 "body":"This study investigates the interconnected dynamics of hazards, their vulnerability, and their implications on the environment, resulting in an elevated risk of fatalities. It seeks to understand the complex relationship between these factors and their consequences on human and ecological well-being.",
                 "preview":"https://drive.google.com/file/d/1LTsznwAaFXWds1gunp7is2wvOV-FFmHR/view?usp=drive_link",
-                "user_id":6
+                "user_id":7
     
             },
             {
@@ -76,7 +86,7 @@ const projectdata=[
                   "projectlink":"https://github.com/pintu1609/Learning-app-Grader",
                   "preview":"https://drive.google.com/file/d/1nCG8nxCuUoTXxbilQ0GUIDfW6bQg-oLy/view?usp=sharing",
 
-                  "user_id":7
+                  "user_id":8
       
               }
               

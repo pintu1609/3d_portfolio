@@ -17,7 +17,7 @@ interface WorkItemProps {
 const WorkItem: React.FC<WorkItemProps> = ({ item }) => {
     return (
         <div className="relative group"> {/* Keep the group class for hover effects */}
-            <div className="rounded-md h-[16rem] overflow-hidden duration-300">
+            <div className="rounded-md h-[18rem] overflow-hidden duration-300">
                 <Image
                     src={item?.image}
                     alt="imgage"
