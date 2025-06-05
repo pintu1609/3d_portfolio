@@ -1,5 +1,6 @@
 "use client"
 
+import { div } from "framer-motion/client";
 import Image from "next/image"
 import { useEffect, useState } from "react";
 
@@ -35,10 +36,10 @@ export default function About() {
       }, [subIndex, isDeleting, index]);
     return (
        
-
+        <div className=" bg-bg-color  w-full h-screen py-2 sm:py-0  overflow-y-auto">
                 
-        <div className=" bg-bg-color h-screen w-full overflow-y-auto">
-        <div className="flex flex-col-reverse sm:flex-row-reverse justify-center items-center gap-[2rem] sm:gap-[5rem] h-full w-4/5 mx-auto h-full ">
+        <div className=" min-h-screen  flex justify-center items-center ">
+        <div className="flex flex-col-reverse sm:flex-row-reverse justify-center items-center gap-[2rem] sm:gap-[5rem] h-full w-4/5 mx-auto h-full  ">
             <div className="flex flex-col justify-start gap-2 sm:w-1/2">
                 <h3 className="text-2xl text-main-white font-bold">About Me</h3>
                 {/* <h1 className="text-5xl text-main-color font-bold">Pintu Kumar</h1> */}
@@ -59,12 +60,13 @@ export default function About() {
 
                 </div>
             </div>
-            <div className="rounded-full border-4 border-main-color overflow-hidden shadow-[0_0_1rem_0_#0ef] transition duration-300 sm:w-1/2 ">
+            <div className="rounded-full border-4 border-main-color overflow-hidden shadow-[0_0_1rem_0_#0ef] transition duration-300 sm:w-1/2 mt-4 sm:mt-0 ">
             
                 <Image  src="/image/Pintu_Kumar.jpeg" alt="pintu"  className="w-full h-full object-cover"
                width={100} height={100} 
                layout="responsive"/>
             </div>
+        </div>
         </div>
         </div>
        

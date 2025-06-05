@@ -34,9 +34,10 @@ export default function Home() {
         return () => clearTimeout(timeout);
       }, [subIndex, isDeleting, index]);
     return (
-        
+                <div className=" bg-bg-color h-screen  overflow-y-auto ">
+
        
-        <div className=" bg-bg-color h-screen w-full overflow-y-auto ">
+        <div className="min-h-screen  flex justify-center items-center ">
         <div className="flex flex-col-reverse sm:flex-row justify-center items-center gap-[3rem] sm:gap-[5rem] h-full w-full custom:w-4/5 mx-auto h-full p-4 sm:p-0 ">
             <div className="flex flex-col justify-start gap-2 sm:w-1/2">
                 <h3 className="text-2xl text-main-white font-bold">Hello i&apos;m</h3>
@@ -97,6 +98,7 @@ layout="responsive" width={50} height={50}
 
                  />
             </div>
+        </div>
         </div>
         </div>
         
