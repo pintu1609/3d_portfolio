@@ -1,13 +1,18 @@
 const ServiceData = [
     {
-        title:"Web Development",
-        icon:<i className='bx bx-code-alt' ></i>, 
-        desc:'I have experience in web development using HTML, CSS, JavaScript, React, Next.js, Node.js, and Tailwind CSS. I also have experience in building RESTful APIs using Node.js, Express.js, and MongoDB.'
+        title: "Web Development",
+        icon: <i className='bx bx-code-alt' ></i>, 
+        desc: 'I specialize in building scalable, end-to-end web applications using modern stacks like Next.js, React, and Node.js. My focus is on high-performance architecture, clean RESTful APIs (Express.js), and robust data layers (MongoDB/PostgreSQL).'
     },
     {
-        title:"UI/UX Design",
-        icon:<i className='bx bxs-paint' ></i>, 
-        desc:'I have experience in UI/UX design using Figma. I also have experience in creating wireframes and prototypes using Figma.'
+        title: "AI/Data Integration & Automation",
+        icon: <i className='bx bx-brain' ></i>, // Example icon for AI
+        desc: 'I integrate Python, Deep Learning, and NLP models to build intelligent features (e.g., sentiment analysis, data classification, and process automation). Leverage custom AI solutions to drive data-driven insights and efficiency.'
+    },
+    {
+        title: "UI/UX Design",
+        icon: <i className='bx bxs-paint' ></i>, 
+        desc: 'I translate business goals into intuitive and user-centric digital experiences. I provide complete UI/UX services, from detailed wireframing and prototyping in Figma to delivering development-ready designs focused on usability and conversion.'
     },
 ]
 

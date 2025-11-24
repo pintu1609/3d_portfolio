@@ -43,7 +43,7 @@ export default function Home() {
                 <h3 className="text-2xl text-main-white font-bold">Hello i&apos;m</h3>
                 <h1 className="text-5xl text-main-color font-bold">Pintu Kumar</h1>
                 <h3 className="text-2xl text-title-color font-bold h-[30px]">{displayedText}</h3>
-                <p className="text-xl text-main-white">A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.</p>
+                <p className="text-xl text-main-white">A Full-Stack Engineer <span className="text-2xl text-title-color font-bold h-[30px] underline">MERN/Next.js</span> focused on building data-driven products. I develop scalable, full-stack solutions and integrate specialized AI/NLP models to extract deep insights and create measurable social and technical impact.</p>
 
                 <div className="flex flex-col sm:flex-row sm:space-x-8 mt-4 items-start sm:items-center gap-4 sm:gap-0">
                     <button

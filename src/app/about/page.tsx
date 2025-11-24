@@ -43,7 +43,7 @@ export default function About() {
                 {/* <h1 className="text-5xl text-main-color font-bold">Pintu Kumar</h1> */}
                 <h3 className="text-2xl text-main-color font-bold h-[30px]">{displayedText}</h3>
                 <p className="text-xl text-main-white text-justify">
-                    A passionate Full Stack Developer with a strong foundation in both frontend and backend technologies. I specialize in creating scalable and efficient web applications using modern technologies like React, Node.js, and MongoDB. With experience in developing complex systems, from ICU digitization to work management solutions, I thrive on solving problems and building user-friendly, secure platforms. I’m always eager to collaborate, innovate, and create impactful solutions that bridge the gap between technology and users.
+                   A passionate Full-Stack Developer with a strong foundation in both frontend and backend technologies. I specialize in creating scalable and efficient web applications using modern, high-performance technologies like <span className="text-xl text-title-color">Next.js,</span> React, Node.js, and MongoDB. With experience in developing complex systems, from ICU digitization to work management solutions, <span className="text-xl text-title-color">and integrating advanced Python/AI/NLP models for data-driven insights,</span> I thrive on solving technical problems and building user-friendly, secure platforms. I’m always eager to collaborate, innovate, and create impactful solutions that bridge the gap between technology and<span className="text-xl text-title-color"> measurable business outcomes.</span>
                 </p>
 
 
