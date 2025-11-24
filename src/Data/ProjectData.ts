@@ -10,7 +10,7 @@ const projectdata=[
     "user_id":1
   },
   {
-    "image":'/image/chatting_app.png',
+    "image":'/image/eventtora.png',
     "tools":"HTML, CSS, JavaScript, Next.js,Tailwind, Node,express, MongoDB",
     "title": "Event Management System",
     "duration":"jun. 2025 - Jun. 2025",
