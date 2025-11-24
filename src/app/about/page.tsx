@@ -32,6 +32,7 @@ export default function About() {
     
         return () => clearTimeout(timeout);
       }, [subIndex, isDeleting, index]);
+      
     return (
        
         <div className=" bg-bg-color  w-full h-screen py-2 sm:py-0  overflow-y-auto">

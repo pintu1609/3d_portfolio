@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 
 export default function ScrollText() {
