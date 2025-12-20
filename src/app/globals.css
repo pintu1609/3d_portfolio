@@ -141,7 +141,9 @@ transition-delay: 0.5s;
 
 .animate-nav {
   animation: nav-animation 1s ease-in-out backwards;
-  animation-delay: 5s;
+  /* animation-delay: 5s; */
+  /* remove cube effect */
+  animation-delay: 1s;
 
 }
 
