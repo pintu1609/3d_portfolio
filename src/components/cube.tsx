@@ -7,6 +7,7 @@ import Resume from "@/app/resume/page";
 import Contact from "@/app/contact/page";
 import { usePathname } from "next/navigation";
 import Template from "@/app/template";
+import { FEATURES } from "../../config/features";
 
 const Cube = () => {
   const currentPath = usePathname();
@@ -30,6 +31,8 @@ const Cube = () => {
     : currentPath !== "/home"
     ? "action-contact"
     : "";
+
+      if (!FEATURES.ENABLE_CUBE) return null;
 
   return (
     <div className="cube">

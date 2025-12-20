@@ -141,7 +141,9 @@ transition-delay: 0.5s;
 
 .animate-nav {
   animation: nav-animation 1s ease-in-out backwards;
-  animation-delay: 5s;
+  /* animation-delay: 5s; */
+  /* remove cube effect */
+  animation-delay: 1s;
 
 }
 
@@ -180,4 +182,20 @@ scrollbar-color: var(--main-color) var(--second-bg-color); */
   -webkit-overflow-scrolling: touch; /* iOS momentum scroll */
   overscroll-behavior: contain;      /* stop scroll chaining */
   touch-action: pan-y;
+}
+
+
+
+
+/* For disable cube */
+
+.cube,
+.face,
+.front,
+.back,
+.left,
+.right,
+.contact {
+  transform: none !important;
+  perspective: none !important;
 }

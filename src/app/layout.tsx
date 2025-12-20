@@ -5,6 +5,7 @@ import './globals.css';
 import Navbar from "@/components/navbar/Navbar";
 import { Toaster } from "react-hot-toast";
 import Cube from "@/components/cube";
+import { FEATURES } from "../../config/features";
 
 
 const geistSans = localFont({
@@ -20,15 +21,26 @@ const geistMono = localFont({
 
 
 
-export default function RootLayout() {
+export default function RootLayout(
+{
+  children,
+}: {
+  children: React.ReactNode;
+}
+
+) {
 
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Cube />
+        {/* <Cube /> */}
+  {/* ✅ Cube exists but does NOT run */}
+        {FEATURES.ENABLE_CUBE && <Cube />}
 
+        {/* ✅ Normal routing */}
+        {!FEATURES.ENABLE_CUBE && children}
 
 
         <div className="fixed bottom-[8px] sm:bottom-[2rem] left-[50%] translate-x-[-50%] z-10 animate-nav">
