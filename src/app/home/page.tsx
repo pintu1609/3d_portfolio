@@ -38,7 +38,7 @@ export default function Home() {
 
     <div className="bg-bg-color h-screen w-full flex items-center justify-center">
 
-      <div className="scroll-area h-[85vh] p-4 md:p-32 overflow-y-auto flex items-center justify-center">
+      <div className="scroll-area h-[85vh] p-4 md:p-32 overflow-y-auto">
           <div className="sm:h-full flex flex-col sm:flex-row-reverse sm:items-center  gap-4">
 
           <div className="sm:w-1/2 flex justify-center">
