@@ -2,11 +2,16 @@
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
+import { FEATURES } from '../../config/features';
 
 // Sample navigation array (navs) to simulate the `idx` logic
 const navs = ["/home", "/about", "/resume", "/portfolio", "/contact"];
 
 const Template = ({ children }: { children: React.ReactNode }) => {
+  if (!FEATURES.ENABLE_CUBE) {
+    return <>{children}</>;
+  }
+
   const currentPath = usePathname();
   const [rotation, setRotation] = useState(0); // Cube rotation state
   

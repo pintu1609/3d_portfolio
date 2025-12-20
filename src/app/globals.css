@@ -181,3 +181,19 @@ scrollbar-color: var(--main-color) var(--second-bg-color); */
   overscroll-behavior: contain;      /* stop scroll chaining */
   touch-action: pan-y;
 }
+
+
+
+
+/* For disable cube */
+
+.cube,
+.face,
+.front,
+.back,
+.left,
+.right,
+.contact {
+  transform: none !important;
+  perspective: none !important;
+}

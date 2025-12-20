@@ -7,8 +7,10 @@ import Resume from "@/app/resume/page";
 import Contact from "@/app/contact/page";
 import { usePathname } from "next/navigation";
 import Template from "@/app/template";
+import { FEATURES } from "../../config/features";
 
 const Cube = () => {
+  if (!FEATURES.ENABLE_CUBE) return null;
   const currentPath = usePathname();
   console.log("🚀 ~ Cube ~ path:", currentPath)
   
