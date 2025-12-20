@@ -10,7 +10,6 @@ import Template from "@/app/template";
 import { FEATURES } from "../../config/features";
 
 const Cube = () => {
-  if (!FEATURES.ENABLE_CUBE) return null;
   const currentPath = usePathname();
   console.log("🚀 ~ Cube ~ path:", currentPath)
   
@@ -32,6 +31,8 @@ const Cube = () => {
     : currentPath !== "/home"
     ? "action-contact"
     : "";
+
+      if (!FEATURES.ENABLE_CUBE) return null;
 
   return (
     <div className="cube">
