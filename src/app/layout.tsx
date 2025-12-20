@@ -31,7 +31,7 @@ export default function RootLayout() {
 
 
 
-        <div className="fixed bottom-[2rem] left-[50%] translate-x-[-50%] z-10 animate-nav">
+        <div className="fixed bottom-[8px] sm:bottom-[2rem] left-[50%] translate-x-[-50%] z-10 animate-nav">
           <Navbar />
         </div>
         <Toaster position="top-right" />

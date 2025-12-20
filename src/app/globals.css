@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  height: 100%;
+  overflow: hidden;   /* 🚫 block page scroll */
+  overscroll-behavior: none;
+}
+
+
 :root {
     --background: #ffffff;
     --foreground: #171717;
@@ -168,3 +176,8 @@ transition-delay: 0.5s;
 /* scrollbar-width: thin;
 scrollbar-color: var(--main-color) var(--second-bg-color); */
 
+.scroll-area {
+  -webkit-overflow-scrolling: touch; /* iOS momentum scroll */
+  overscroll-behavior: contain;      /* stop scroll chaining */
+  touch-action: pan-y;
+}
