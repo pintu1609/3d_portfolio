@@ -51,33 +51,69 @@ export default function Home() {
 
   return (
 
-<section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f172a] via-[#020617] to-[#020617] text-white px-4 py-4 md:px-6 md:py-0">
-
+<section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f172a] via-[#020617] to-[#020617] text-white px-4 py-4 md:px-6 md:py-0 overflow-y-auto">
+ <div className="absolute inset-0 z-0 pointer-events-none">
+        <div 
+          className="absolute inset-0 opacity-[0.15]" 
+          style={{
+            backgroundImage: `radial-gradient(#ffffff 1px, transparent 1px)`,
+            backgroundSize: '40px 40px'
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,#1e3a8a_0%,transparent_50%)] opacity-40"></div>
+        <div className="absolute bottom-0 left-0 w-full h-[40%] bg-gradient-to-t from-[#020617] to-transparent"></div>
+      </div>
 <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10 mb-16 md:mb-0">
 
 {/* RIGHT IMAGE (TOP IN MOBILE) */}
 
-<div className="flex justify-center order-1 md:order-2">
+<div className="relative flex justify-center order-1 md:order-2">
+          
+          {/* Main Circle and Image */}
+          <div className="relative w-[320px] h-[320px] md:w-[480px] md:h-[480px]">
+            
+            {/* Blue Outer Ring Glow */}
+            <div className="absolute inset-0 rounded-full border-[3px] border-cyan-400 shadow-[0_0_80px_rgba(34,211,238,0.3)]"></div>
+            
+            {/* The Image */}
+            <div className="absolute inset-[10px] rounded-full overflow-hidden bg-[#0f172a]">
+              <Image
+                src="/image/professional image.png"
+                alt="Pintu Kumar"
+                fill
+                className="object-fill"
+                priority
+              />
+            </div>
 
-<div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[520px] md:h-[520px]">
+            {/* FLOATING UI CARD 1 (Top Left) */}
+            <div className="absolute -left-20 top-10 w-48 h-32  rounded-2xl p-3 shadow-2xl hidden md:block animate-bounce-slow">
+             
+              <Image
+                src="/image/assets/ui-card1.png"
+                alt="Pintu Kumar"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
 
-<div className="absolute inset-0 rounded-full bg-cyan-400 blur-3xl opacity-20"></div>
+            {/* FLOATING UI CARD 2 (Right Side) */}
+            <div className="absolute -right-8 top-1/4 w-32 h-24  rounded-2xl flex items-center justify-center hidden md:block">
+             
+                <Image
+                src="/image/assets/ui-card2.png"
+                alt="Pintu Kumar"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
 
-<div className="relative w-full h-full rounded-full border-[4px] md:border-[5px] border-cyan-400 overflow-hidden">
-
-<Image
-src="/image/professional image.png"
-alt="Pintu Kumar"
-fill
-className="object-fill"
-priority
-/>
-
-</div>
-
-</div>
-
-</div>
+            {/* Bottom Glow Clouds */}
+            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-full h-32 bg-cyan-500/10 blur-[60px] rounded-full"></div>
+          </div>
+        </div>
 
 
 {/* LEFT CONTENT */}
@@ -99,19 +135,11 @@ Pintu Kumar
 
 <p className="text-gray-300 leading-relaxed max-w-xl mx-auto md:mx-0 text-sm md:text-base">
 
-A Full-Stack Engineer specialized in
-
-<span className="text-cyan-400 font-semibold">
+A Full-Stack Engineer specialized in <span className="text-cyan-400 font-semibold">
  MERN / Next.js
-</span>
-
- focused on building scalable data-driven products and integrating
-
-<span className="text-cyan-400 font-semibold">
+</span> focused on building scalable data-driven products and integrating <span className="text-cyan-400 font-semibold">
  AI / NLP systems
-</span>
-
- to create real-world impact.
+</span> to create real-world impact.
 
 </p>
 
@@ -122,14 +150,14 @@ A Full-Stack Engineer specialized in
 
 <button
 onClick={()=>window.open("https://drive.google.com/file/d/1gwtpz0ot7IOY26uofoFrMkU77R1qAWN5/view")}
-className="bg-cyan-400 text-black font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition"
+className="bg-cyan-400 text-black font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition cursor-pointer"
 >
 Download CV
 </button>
 
 <Link
 href="/contact"
-className="border border-cyan-400 px-6 py-3 rounded-full hover:bg-cyan-400 hover:text-black transition"
+className="border border-cyan-400 px-6 py-3 rounded-full hover:bg-cyan-400 hover:text-black transition cursor-pointer"
 >
 Contact Me
 </Link>
@@ -141,24 +169,43 @@ Contact Me
 
 <div className="flex gap-4 pt-4 justify-center md:justify-start text-xl text-cyan-400">
 
-<Link href="https://github.com/pintu1609" target="_blank">
-<i className="bx bxl-github hover:text-white transition"></i>
+<Link
+href="https://github.com/pintu1609"
+target="_blank"
+className="flex items-center justify-center md:w-12 md:h-12 md:border md:border-cyan-400 md:rounded-full md:hover:bg-cyan-400 md:hover:text-black transition cursor-pointer"
+>
+<i className="bx bxl-github"></i>
 </Link>
 
-<Link href="https://www.linkedin.com/in/pintu-kumar-46b147204/" target="_blank">
-<i className="bx bxl-linkedin hover:text-white transition"></i>
+<Link
+href="https://www.linkedin.com/in/pintu-kumar-46b147204/"
+target="_blank"
+className="flex items-center justify-center md:w-12 md:h-12 md:border md:border-cyan-400 md:rounded-full md:hover:bg-cyan-400 md:hover:text-black transition cursor-pointer"
+>
+<i className="bx bxl-linkedin"></i>
 </Link>
 
-<Link href="https://x.com/Pintu_Kumar_24" target="_blank">
-<i className="bx bxl-twitter hover:text-white transition"></i>
+<Link
+href="https://x.com/Pintu_Kumar_24"
+target="_blank"
+className="flex items-center justify-center md:w-12 md:h-12 md:border md:border-cyan-400 md:rounded-full md:hover:bg-cyan-400 md:hover:text-black transition cursor-pointer"
+>
+<i className="bx bxl-twitter"></i>
 </Link>
 
-<Link href="https://www.instagram.com/pintu_kumar_29/" target="_blank">
-<i className="bx bxl-instagram hover:text-white transition"></i>
+<Link
+href="https://www.instagram.com/pintu_kumar_29/"
+target="_blank"
+className="flex items-center justify-center md:w-12 md:h-12 md:border md:border-cyan-400 md:rounded-full md:hover:bg-cyan-400 md:hover:text-black transition cursor-pointer"
+>
+<i className="bx bxl-instagram"></i>
 </Link>
 
-<Link href="mailto:pintukumar160900@gmail.com">
-<i className="bx bxl-gmail hover:text-white transition"></i>
+<Link
+href="mailto:pintukumar160900@gmail.com"
+className="flex items-center justify-center md:w-12 md:h-12 md:border md:border-cyan-400 md:rounded-full md:hover:bg-cyan-400 md:hover:text-black transition cursor-pointer"
+>
+<i className="bx bxl-gmail"></i>
 </Link>
 
 </div>
@@ -166,7 +213,7 @@ Contact Me
 
 {/* TECH STACK */}
 
-<div className="flex flex-wrap gap-4 pt-5 justify-center md:justify-start text-gray-400 text-xs md:text-sm">
+<div className="flex flex-wrap gap-4 pt-5 justify-center md:justify-start text-cyan-100 md:text-gray-400 text-xs md:text-sm">
 
 <span>React</span>
 <span>Next.js</span>
@@ -180,7 +227,18 @@ Contact Me
 
 </div>
 
+ <style jsx>{`
+        @keyframes bounce-slow {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-15px); }
+        }
+        .animate-bounce-slow {
+          animation: bounce-slow 4s ease-in-out infinite;
+        }
+      `}</style>
+
 </section>
+
 
   );
 }
