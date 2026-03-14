@@ -43,7 +43,7 @@ export default function Contact() {
     })
 
     return (
-        <div className=" bg-bg-color flex justify-center h-screen w-full overflow-y-auto">
+        <div className=" bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#020617] flex justify-center h-screen w-full overflow-y-auto">
             <div className="flex flex-col items-center gap-4 w-[90%] md:w-3/5 py-16">
 
                 <h2 className="text-3xl text-main-white font-bold">Contact</h2>
