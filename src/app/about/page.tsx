@@ -3,103 +3,183 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const titles = ["Full Stack Developer","MERN Developer","AI / NLP Developer"];
 export default function About() {
-  const titles = ["Full Stack Developer", "UI/UX Developer"];
 
-  const [index, setIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState("");
-  const [subIndex, setSubIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
+  const [index,setIndex] = useState(0);
+  const [displayedText,setDisplayedText] = useState("");
+  const [subIndex,setSubIndex] = useState(0);
+  const [isDeleting,setIsDeleting] = useState(false);
+
+  useEffect(()=>{
+
+    const timeout = setTimeout(()=>{
+
       const fullText = titles[index];
 
-      if (!isDeleting && subIndex < fullText.length) {
-        setDisplayedText((prev) => prev + fullText[subIndex]);
+      if(!isDeleting && subIndex < fullText.length){
+        setDisplayedText(prev=>prev + fullText[subIndex]);
         setSubIndex(subIndex + 1);
-      } else if (isDeleting && subIndex > 0) {
-        setDisplayedText((prev) => prev.slice(0, -1));
-        setSubIndex(subIndex - 1);
-      } else if (!isDeleting && subIndex === fullText.length) {
-        setTimeout(() => setIsDeleting(true), 1000);
-      } else if (isDeleting && subIndex === 0) {
-        setIsDeleting(false);
-        setIndex((prev) => (prev + 1) % titles.length);
       }
-    }, isDeleting ? 60 : 140);
 
-    return () => clearTimeout(timeout);
-  }, [subIndex, isDeleting, index]);
+      else if(isDeleting && subIndex > 0){
+        setDisplayedText(prev=>prev.slice(0,-1));
+        setSubIndex(subIndex - 1);
+      }
+
+      else if(!isDeleting && subIndex === fullText.length){
+        setTimeout(()=>setIsDeleting(true),1200);
+      }
+
+      else if(isDeleting && subIndex === 0){
+        setIsDeleting(false);
+        setIndex((prev)=>(prev+1)%titles.length);
+      }
+
+    },isDeleting ? 60 : 120);
+
+    return ()=>clearTimeout(timeout);
+
+  },[subIndex,isDeleting,index]);
+
 
   return (
-    <div className="bg-bg-color h-screen w-full flex items-center justify-center">
 
-      <div className="h-[85vh] p-4 sm:p-8 overflow-y-auto">
-         <section className="sm:h-full flex items-center justify-center   ">
+<section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#020617] text-white px-4 py-8  md:px-6">
 
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
-          <div className="sm:w-1/2 flex justify-center">
-            <div className="w-[220px] h-[220px] sm:w-[380px] sm:h-[380px] rounded-full border-4 border-main-color overflow-hidden shadow-[0_0_1rem_0_#0ef] hover:shadow-[0_0_3rem_0_#0ef] transition">
-             <Image
-                src="/image/Pintu_Kumar.jpeg"
-                alt="Pintu Kumar"
-                width={400}
-                height={400}
-                priority
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+<div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-8 md:mb-0">
 
-          <div className="flex flex-col gap-4 text-center sm:text-left sm:w-1/2 md:pr-16">
-          <h3 className="text-xl sm:text-2xl text-main-white font-bold">
-             About Me
-           </h3>
+{/* IMAGE */}
 
-           <h3 className="text-lg sm:text-2xl text-main-color font-bold h-[32px]">
-            {displayedText}
-           </h3>
+<div className="flex justify-center order-1 md:order-none">
 
-           <p className="text-base sm:text-lg text-main-white leading-relaxed text-justify">
-             A passionate Full-Stack Developer with a strong foundation in both
-              frontend and backend technologies. I specialize in building
-             scalable and efficient web applications using modern stacks like{" "}
-              <span className="text-title-color font-semibold">
-               Next.js, React, Node.js, and MongoDB
-              </span>
-              .
-              <br /><br />
-               With experience ranging from ICU digitization systems to work
-            management platforms and{" "}
-            <span className="text-title-color font-semibold">
-              AI/NLP-powered data-driven solutions
-            </span>
-            , I enjoy solving complex technical challenges while crafting
-            clean, user-friendly, and secure products that deliver{" "}
-            <span className="text-title-color font-semibold">
-              measurable business impact
-             </span>
-              .
-           </p>
+<div className="relative w-[260px] h-[320px] sm:w-[320px] sm:h-[420px] md:w-[420px] md:h-[520px]">
 
-            <div className="mt-6 flex justify-center sm:justify-start">
-              <button className="text-sm text-bg-color bg-main-color px-8 py-3 rounded-full shadow-[0_0_1rem_0_#0ef] transition hover:shadow-none">
-                 View More
-             </button>
-            </div>
-          </div>
+<div className="absolute inset-0 rounded-[50%/60%] bg-cyan-400 blur-3xl opacity-20"></div>
 
-        </div>
+<div className="relative w-full h-full rounded-[50%/60%] overflow-hidden border-[4px] md:border-[5px] border-cyan-400 shadow-[0_0_60px_#22d3ee]">
+
+<Image
+src="/image/professional image.png"
+alt="Pintu Kumar"
+fill
+className="object-cover"
+priority
+/>
+
+</div>
+
+</div>
+
+</div>
 
 
-         </section>
+{/* TEXT */}
+
+<div className="space-y-6 text-center md:text-left order-2 md:order-none">
+
+<h2 className="text-3xl md:text-4xl font-bold text-cyan-400">
+About Me
+</h2>
+
+<h3 className="text-xl md:text-2xl font-semibold h-[32px]">
+{displayedText}
+<span className="animate-pulse">|</span>
+</h3>
 
 
-      </div>
+<p className="text-gray-300 leading-relaxed text-sm md:text-base">
+
+I am a passionate <span className="text-cyan-400 font-semibold">
+Full-Stack Developer
+</span> specializing in building scalable,
+high-performance applications using modern technologies like
+
+<span className="text-cyan-400 font-semibold">
+ React, Next.js, Node.js and MongoDB
+</span>.
+
+<br/><br/>
+
+My experience includes developing enterprise platforms,
+ICU digitization systems, and AI/NLP driven solutions.
+
+I enjoy solving complex technical challenges while designing
+clean, scalable and user-friendly applications.
+
+</p>
 
 
-    </div>
+{/* STATS */}
+
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+
+<div className="bg-[#020617] border border-cyan-400 rounded-xl p-5 text-center shadow-lg">
+
+<h3 className="text-2xl md:text-3xl font-bold text-cyan-400">
+2+
+</h3>
+
+<p className="text-gray-400 text-sm">
+Years Experience
+</p>
+
+</div>
 
 
-  )}
+<div className="bg-[#020617] border border-cyan-400 rounded-xl p-5 text-center shadow-lg">
+
+<h3 className="text-2xl md:text-3xl font-bold text-cyan-400">
+10+
+</h3>
+
+<p className="text-gray-400 text-sm">
+Projects
+</p>
+
+</div>
+
+
+<div className="bg-[#020617] border border-cyan-400 rounded-xl p-5 text-center shadow-lg">
+
+<h3 className="text-2xl md:text-3xl font-bold text-cyan-400">
+5+
+</h3>
+
+<p className="text-gray-400 text-sm">
+Technologies
+</p>
+
+</div>
+
+</div>
+
+
+{/* BUTTON */}
+
+<div className="pt-4">
+
+<button
+className="bg-cyan-400 text-black font-semibold px-6 md:px-8 py-3 rounded-full hover:scale-105 transition"
+onClick={() =>
+window.open(
+"https://drive.google.com/file/d/1gwtpz0ot7IOY26uofoFrMkU77R1qAWN5/view"
+)
+}
+>
+
+View Resume
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+  );
+}

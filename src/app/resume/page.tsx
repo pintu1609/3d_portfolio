@@ -10,7 +10,7 @@ export default function Resume() {
 
      
 
-        <div className="bg-bg-color h-screen w-full">
+        <div className="bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#020617] h-screen w-full">
         <div className="flex justify-center  py-8 ">
         <div className="flex flex-col items-center w-4/5 gap-[2rem]">
 
