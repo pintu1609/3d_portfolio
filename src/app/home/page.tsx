@@ -4,13 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const titles = [
+  "Full Stack Developer",
+  "MERN Developer",
+  "AI / NLP Developer"
+];
 export default function Home() {
-
-  const titles = [
-    "Full Stack Developer",
-    "MERN Developer",
-    "AI / NLP Developer"
-  ];
+  
 
   const [index,setIndex] = useState(0);
   const [displayedText,setDisplayedText] = useState("");
@@ -85,7 +85,7 @@ priority
 <div className="space-y-5 order-2 md:order-1 text-center md:text-left">
 
 <p className="text-gray-400 text-base md:text-lg">
-Hello I'm
+Hello I&apos;m
 </p>
 
 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-cyan-400">

@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const titles = ["Full Stack Developer","MERN Developer","AI / NLP Developer"];
 export default function About() {
 
-  const titles = ["Full Stack Developer","MERN Developer","AI / NLP Developer"];
 
   const [index,setIndex] = useState(0);
   const [displayedText,setDisplayedText] = useState("");
