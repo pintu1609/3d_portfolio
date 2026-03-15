@@ -135,11 +135,11 @@ Pintu Kumar
 
 <p className="text-gray-300 leading-relaxed max-w-xl mx-auto md:mx-0 text-sm md:text-base">
 
-A Full-Stack Engineer specialized in <span className="text-cyan-400 font-semibold">
+A Full-Stack Engineer specialized in{" "}<span className="text-cyan-400 font-semibold">
  MERN / Next.js
-</span> focused on building scalable data-driven products and integrating <span className="text-cyan-400 font-semibold">
+</span>{" "}focused on building scalable data-driven products and integrating{" "}<span className="text-cyan-400 font-semibold">
  AI / NLP systems
-</span> to create real-world impact.
+</span>{" "}to create real-world impact.
 
 </p>
 
